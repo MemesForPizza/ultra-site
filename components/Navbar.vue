@@ -39,12 +39,20 @@
     :deep(:link) {
       color: #fff;
       display: inline-block;
-      margin: 0.5em;
+      padding: 0.5em;
       text-decoration: none;
     }
 
     .router-link-active {
-      transform: scale(1.2);
+      text-decoration: underline;
+    }
+
+    .navbar_link_unavailable {
+      cursor: not-allowed;
+    }
+
+    *:hover {
+      background-color: #ffffff40;
     }
   }
 }
