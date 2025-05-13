@@ -2,5 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css: ["~/assets/styles/main.scss"]
+  css: ["~/assets/styles/main.scss"],
+  ssr: true,
+  nitro: {
+    preset: "cloudflare"
+  }
 })

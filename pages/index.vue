@@ -1,9 +1,11 @@
 <template>
   <div class="page">
     <Section class="hero_landing">
-      MANKIND IS <span class="red">DEAD</span><br>
-      <span class="red">BLOOD</span> IS FUEL<br>
-      HELL IS <span class="red">FULL</span>
+      <div class="hero_landing_text">
+        MANKIND IS <span class="red">DEAD</span><br>
+        <span class="red">BLOOD</span> IS FUEL<br>
+        HELL IS <span class="red">FULL</span>
+      </div>
     </Section>
     <UltraKillSection id="section_1" style="--bgcol: #970202ff;">
       <div class="left">
@@ -51,11 +53,34 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+  font-size: 4em;
 
-  .red {
-    color: #f00;
+  .hero_landing_text {
+    .red {
+      animation: hero_landing_red_entry 3s cubic-bezier(0.22, 1, 0.36, 1);
+      color: #f00;
+    }
+
+    animation: hero_landing_text_entry 5s cubic-bezier(0.16, 1, 0.3, 1);
   }
+}
+
+@keyframes hero_landing_text_entry {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero_landing_red_entry {
+  from { color: #fff; }
+  30% { color: #fff; }
+  100% { color: #f00; }
 }
 
 #section_1 {
