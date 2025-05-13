@@ -6,5 +6,8 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     preset: "cloudflare"
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in'}
   }
 })

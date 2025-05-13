@@ -5,8 +5,8 @@
     </div>
     <div class="navbar_contents">
       <NuxtLink to="/">home</NuxtLink>
-      <NuxtLink class="navbar_link_unavailable">guides</NuxtLink>
-      <NuxtLink class="navbar_link_unavailable">forum</NuxtLink>
+      <NuxtLink to="/guides">guides</NuxtLink>
+      <NuxtLink to="/forum">forum</NuxtLink>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@
       text-decoration: underline;
     }
 
-    .navbar_link_unavailable {
+    :not(:link) {
       cursor: not-allowed;
     }
 

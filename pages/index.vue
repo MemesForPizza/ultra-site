@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div>
     <Section class="hero_landing">
       <div class="hero_landing_text">
         MANKIND IS <span class="red">DEAD</span><br>
