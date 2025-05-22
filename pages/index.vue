@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page">
     <Section class="hero_landing">
       <div class="hero_landing_text">
         MANKIND IS <span class="red">DEAD</span><br>
@@ -7,39 +7,40 @@
         HELL IS <span class="red">FULL</span>
       </div>
     </Section>
-    <UltraKillSection id="section_1" style="--bgcol: #970202ff;">
-      <div class="left">
-        <video src="/videos/trailer.mp4" controls></video>
-      </div>
-      <div class="right"><span style="font-size: 3em;">
-          <UltraKillLogo />
-        </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex necessitatibus voluptatibus culpa velit
-        voluptate dignissimos inventore, voluptatem esse quod consectetur nobis sint quaerat ut quis illum modi et eum
-        nam aliquid quasi veritatis unde odio. Quidem reprehenderit ducimus, iusto laboriosam, eligendi beatae et rem
-        nemo natus vero dolores tempora voluptatum amet illum necessitatibus! Numquam omnis veniam dolorum error
-        accusantium sint aut praesentium exercitationem ex, optio architecto ut pariatur doloribus. Voluptatem ea iste
-        deleniti! Iste quae, architecto corporis facilis, illo exercitationem voluptatibus sint sit rem odio magnam
-        nostrum maiores nesciunt facere explicabo quisquam, minima tempore eligendi natus dicta porro maxime deserunt.
-      </div>
-    </UltraKillSection>
-    <UltraKillSection id="section_2" style="--bgcol: #970202ff;">
-      <div class="left">
-        <span style="font-size: 3em;">
-          <img src="~/assets/images/logo/logo_minimal.svg" style="height: 1em; vertical-align: bottom;">
-        </span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum dolorem eius, numquam dolorum
-        necessitatibus minima placeat illum ex, eveniet reprehenderit deleniti, vitae alias rem. Aut labore, consectetur
-        veniam molestiae quo repellat, obcaecati a quos itaque iusto blanditiis nesciunt fugiat commodi? Sapiente ex
-        impedit voluptatibus non soluta aut a, blanditiis ea eaque fuga maxime magnam minima vitae similique ratione,
-        accusantium, error perferendis sed eos doloribus! Ea fuga fugit earum fugiat laborum ad eaque. Adipisci illo
-        nulla
-        neque inventore aut temporibus quos consectetur porro expedita iure cum, blanditiis totam ipsum non praesentium,
-        obcaecati nihil, minus maxime modi? Reprehenderit, dicta. Delectus, debitis!
-      </div>
-      <div class="right">
-        <img src="~/assets/images/thumb/ultrasite.jpg" style="height: 12em;">
-      </div>
-    </UltraKillSection>
+    <div id="content_container">
+      <UltraKillSection id="section_1" style="--bgcol: #970202ff;">
+        <div class="left">
+          <video src="/videos/trailer.mp4" controls></video>
+        </div>
+        <div class="right"><span style="font-size: 3em;">
+            <UltraKillLogo />
+          </span>Ultrakill is a 2020 fast-paced first person shooter developed by Hakita 'Arsi' Pitala and published by
+          New Blood Interactive. Humanity has gone extinct, the only beings left on earth are machines fueled by blood.
+          As
+          blood has run out on the surface, machines venture deep into hell to find more. You take the role as V1, an
+          advanced combat machine developed for war as it ventures to find blood. Hell itself is filled with the undead,
+          demons, and other machines. Strategy and movement is key to stay alive, <b>for hell is full, and blood is
+            fuel.</b>
+        </div>
+      </UltraKillSection>
+      <UltraKillSection id="section_2" style="--bgcol: #970202ff;">
+        <div class="left">
+          <span style="font-size: 3em;">
+            <img src="~/assets/images/logo/logo_minimal.svg" style="height: 1em; vertical-align: bottom;">
+          </span>
+          Ultrasite is a fansite for fans of the overwhelmingly popular game. This site serves as a space for fans to
+          talk
+          about the game, discuss strategies, show achievements and clips, <s>as well as being a place to beg for Hakita
+            to
+            release layer 8 cmon its been 5 years we want to p-rank everything now</s>. Ultrasite also offers valuable
+          links
+          and guides for new players, as well as a forum for discussions and conversations.
+        </div>
+        <div class="right">
+          <img src="~/assets/images/thumb/ultrasite.jpg" style="height: 12em;">
+        </div>
+      </UltraKillSection>
+    </div>
   </div>
 </template>
 
@@ -78,41 +79,63 @@
 }
 
 @keyframes hero_landing_red_entry {
-  from { color: #fff; }
-  30% { color: #fff; }
-  100% { color: #f00; }
+  from {
+    color: #fff;
+  }
+
+  30% {
+    color: #fff;
+  }
+
+  100% {
+    color: #f00;
+  }
 }
 
-#section_1 {
+#page {
   display: flex;
-  text-align: left;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-  .left {
-    padding: 0.5em;
+#content_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
 
-    video {
-      height: 12em;
+  #section_1 {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+
+    .left {
+      padding: 0.5em;
+
+      video {
+        height: 12em;
+      }
+    }
+
+    .right {
+      padding: 0.5em;
     }
   }
 
-  .right {
-    padding: 0.5em;
-  }
-}
+  #section_2 {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
 
-#section_2 {
-  display: flex;
-  text-align: left;
-  flex-direction: row;
+    .left {
+      padding: 0.5em;
+      flex-grow: 1;
+    }
 
-  .left {
-    padding: 0.5em;
-    flex-grow: 1;
-  }
-
-  .right {
-    padding: 0.5em;
+    .right {
+      padding: 0.5em;
+    }
   }
 }
 </style>

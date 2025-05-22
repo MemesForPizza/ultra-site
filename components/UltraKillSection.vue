@@ -10,10 +10,9 @@
   border-image-width: calc(1.5 * var(--padding, 1em)); 
   border-image-source: url("~/assets/images/ornaments/nut.png");
   border-style: solid;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: calc(100% - 2 * var(--padding, 1em) - 2px);
-  padding: var(--padding, 1em);
+  border-width: var(--padding, 1em);
+  margin: 1em;
+  width: calc(100% - 2 * var(--padding, 1em));
   background-color: var(--bgcol);
 }
 </style>

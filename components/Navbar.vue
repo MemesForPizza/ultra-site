@@ -41,6 +41,7 @@
       display: inline-block;
       padding: 0.5em;
       text-decoration: none;
+      font-size: 1.2em;
     }
 
     .router-link-active {
