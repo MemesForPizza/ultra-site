@@ -7,7 +7,7 @@
         HELL IS <span class="red">FULL</span>
       </div>
     </Section>
-    <div id="content_container">
+    <div id="content">
       <UltraKillSection id="section_1" style="--bgcol: #970202ff;">
         <div class="left">
           <video src="/videos/trailer.mp4" controls></video>
@@ -99,7 +99,7 @@
   width: 100%;
 }
 
-#content_container {
+#content {
   display: flex;
   flex-direction: column;
   align-items: center;
