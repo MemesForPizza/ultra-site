@@ -1,7 +1,12 @@
+<script setup lang="ts">
+import { NuxtLink } from '#components';
+
+</script>
+
 <template>
-  <div id="page">
-    <div id="content">
-      <UltraKillGuide>
+  <div>
+    <SectionContent>
+      <UltraKillGuide to="./guides/basics">
         <template #preview><img src="~/assets/images/guides/basics.png"></template>
         BASICS
       </UltraKillGuide>
@@ -21,7 +26,7 @@
         <template #preview><img src="~/assets/images/guides/wiki.png"></template>
         WIKI
       </UltraKillGuide>
-    </div>
+    </SectionContent>
   </div>
 </template>
 

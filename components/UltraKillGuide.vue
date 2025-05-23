@@ -1,15 +1,29 @@
 <template>
-  <UltraKillSection class="guide_entry" style="--bgcol: #4a2a2aff;">
-    <div class="guide_entry_icon">
-      <slot name="preview"></slot>
-    </div>
-    <div class="guide_entry_title">
-      <slot />
-    </div>
-  </UltraKillSection>
+  <NuxtLink :to="props.to">
+    <UltraKillSection class="guide_entry" style="--bgcol: #4a2a2aff;">
+      <div class="guide_entry_icon">
+        <slot name="preview"></slot>
+      </div>
+      <div class="guide_entry_title">
+        <slot />
+      </div>
+    </UltraKillSection>
+  </NuxtLink>
 </template>
 
+<script setup lang="ts">
+const props = defineProps<{
+  to?: string;
+}>();
+</script>
+
 <style scoped lang="scss">
+:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 .guide_entry {
   display: flex;
   flex-direction: row;
