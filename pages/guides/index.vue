@@ -10,7 +10,7 @@ import { NuxtLink } from '#components';
         <template #preview><img src="~/assets/images/guides/basics.png"></template>
         BASICS
       </UltraKillGuide>
-      <UltraKillGuide>
+      <UltraKillGuide to="./guides/advanced">
         <template #preview><img src="~/assets/images/guides/advanced.png"></template>
         ADVANCED
       </UltraKillGuide>
