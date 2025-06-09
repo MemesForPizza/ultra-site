@@ -7,7 +7,7 @@
         HELL IS <span class="red">FULL</span>
       </div>
     </Section>
-    <div id="content_container">
+    <SectionContent>
       <UltraKillSection id="section_1" style="--bgcol: #970202ff;">
         <div class="left">
           <video src="/videos/trailer.mp4" controls></video>
@@ -40,7 +40,7 @@
           <img src="~/assets/images/thumb/ultrasite.jpg" style="height: 12em;">
         </div>
       </UltraKillSection>
-    </div>
+    </SectionContent>
   </div>
 </template>
 
@@ -99,43 +99,36 @@
   width: 100%;
 }
 
-#content_container {
+#section_1 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1000px;
+  text-align: left;
+  flex-direction: row;
 
-  #section_1 {
-    display: flex;
-    text-align: left;
-    flex-direction: row;
+  .left {
+    padding: 0.5em;
 
-    .left {
-      padding: 0.5em;
-
-      video {
-        height: 12em;
-      }
-    }
-
-    .right {
-      padding: 0.5em;
+    video {
+      height: 12em;
     }
   }
 
-  #section_2 {
-    display: flex;
-    text-align: left;
-    flex-direction: row;
+  .right {
+    padding: 0.5em;
+  }
+}
 
-    .left {
-      padding: 0.5em;
-      flex-grow: 1;
-    }
+#section_2 {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
 
-    .right {
-      padding: 0.5em;
-    }
+  .left {
+    padding: 0.5em;
+    flex-grow: 1;
+  }
+
+  .right {
+    padding: 0.5em;
   }
 }
 </style>
